@@ -19,7 +19,7 @@ public class TempConverterApp {
 			choice = sc.next();
 		}
 
-		System.out.println(\nGoodbye!");
+		System.out.println("\nGoodbye!");
 	}
 
 }
