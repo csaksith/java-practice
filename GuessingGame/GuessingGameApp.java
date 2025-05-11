@@ -23,8 +23,7 @@ public class GuessingGameApp {
 			int guess = -1;
 			int counter = 0;
 			while (guess != answer) {
-				System.out.print("\nEnter number: ");
-				guess = sc.nextInt();
+				guess = getInt(sc, "Enter number: ", 1, 100);
 				counter++;
 
 				int diff = guess - answer;
@@ -63,5 +62,26 @@ public class GuessingGameApp {
 			choice = sc.next();
 		}
 		System.out.println("\nGoodbye!");
+	}
+
+	// data validation method to validate input
+	public static int getInt(Scanner sc, String prompt, int min, int max) {
+		int input = 0;
+		boolean isValid = false;
+		while (!isValid) {
+			System.out.print(prompt);
+			if (sc.hasNextInt()) {
+				input = sc.nextInt();
+				if (input >= min && input <= max) {
+					isValid = true;
+				} else {
+					System.out.println("Error! Number must be between " + min + " and " + max);
+				}
+			} else {
+				System.out.println("Error! Invalid integer. Try again.");
+				sc.next(); // consume invalid input
+			}
+		}
+		return input;
 	}
 }
