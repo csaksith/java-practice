@@ -39,7 +39,7 @@ public class Contact {
 
 	public String displayContact() {
 		return "--------------------------------------------\n" + "---- Current Contact -----------------------\n"
-				+ "--------------------------------------------\n" + "Name:         " + firstName + " " + lastName
+				+ "--------------------------------------------\n" + "Name:          " + firstName + " " + lastName
 				+ "\nEmail Address: " + email + "\nPhone Number:  " + phone
 				+ "\n--------------------------------------------";
 	}
