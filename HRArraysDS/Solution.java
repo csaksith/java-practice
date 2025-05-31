@@ -6,6 +6,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -19,8 +20,14 @@ class Result {
 	 */
 
 	public static List<Integer> reverseArray(List<Integer> a) {
-		// Write your code here
-
+		// create reversed array list
+		List<Integer> reversed = new ArrayList<>();
+		// for loop
+		// take the last element, second to last and so on
+		for (int i = a.size() - 1; i >= 0; i--) {
+			reversed.add(a.get(i));
+		}
+		return reversed;
 	}
 
 }
